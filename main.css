@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10,45 +11,48 @@
   --sedans-color: hsl(31, 77%, 52%);
   --suvs-color: hsl(184, 100%, 22%);
   --luxury-color: hsl(179, 100%, 13%);
-
-  /* Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
-  Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
 }
 body {
+  margin: 0;
   font-size: 15px;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  font-family: "Lexend Deca", sans-serif;
   background-color: var(--main-color);
+  font-family: "Lexend Deca", sans-serif;
 }
-.main {
+.container > .cards {
   width: fit-content;
   border-radius: 10px;
   overflow: hidden;
   margin: var(--main-gap) auto;
 }
 @media (min-width: 778px) {
-  .main {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+  .container > .cards {
     display: flex;
   }
 }
-.main .child {
+
+.cards .card {
   padding: var(--main-gap);
   color: var(--main-color);
   background-color: var(--main-color);
 }
-.main .child > h1 {
+.cards .card > h2 {
   text-transform: uppercase;
   font-size: var(--main-gap);
   font-family: "Big Shoulders Display", cursive;
 }
-.main .child > p {
+.cards .card > p {
   max-width: 225px;
   line-height: 1.7;
   color: var(--transparent-white);
 }
-.main .child > .more {
+.cards .card > .more {
   display: block;
   cursor: pointer;
   font-weight: bold;
@@ -58,34 +62,34 @@ body {
   background-color: var(--main-color);
   transition: background-color 0.3s, color 0.3s;
 }
-.main .child > .more:hover {
+.cards .card > .more:hover {
   color: var(--main-color);
   background-color: transparent;
 }
 @media (min-width: 778px) {
-  .main .child > .more {
+  .cards .card > .more {
     margin-top: 80px;
   }
 }
-.main .child > .more:focus {
+.cards .card > .more:focus {
   outline: none;
 }
 /* Colors */
-.main > .sednas {
+.cards > .sednas {
   background-color: var(--sedans-color);
 }
-.main > .suvs {
+.cards > .suvs {
   background-color: var(--suvs-color);
 }
-.main > .luxury {
+.cards > .luxury {
   background-color: var(--luxury-color);
 }
-.main .sednas > .more {
+.cards .sednas > .more {
   color: var(--sedans-color);
 }
-.main .suvs > .more {
+.cards .suvs > .more {
   color: var(--suvs-color);
 }
-.main .luxury > .more {
+.cards .luxury > .more {
   color: var(--luxury-color);
 }
