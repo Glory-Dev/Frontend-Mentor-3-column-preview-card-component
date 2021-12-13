@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,8 +6,9 @@
 }
 :root {
   --main-gap: 40px;
-  --main-color: hsl(0, 0%, 95%);
-  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --main-color: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+  --para-color: hsla(0, 0%, 100%, 0.75);
+
   --sedans-color: hsl(31, 77%, 52%);
   --suvs-color: hsl(184, 100%, 22%);
   --luxury-color: hsl(179, 100%, 13%);
@@ -15,24 +16,25 @@
 body {
   margin: 0;
   font-size: 15px;
-  background-color: var(--main-color);
   font-family: "Lexend Deca", sans-serif;
+  background-color: var(--main-color);
 }
-.container > .cards {
-  width: fit-content;
-  border-radius: 10px;
+.container {
+  padding: 90px 35px;
+}
+.cards {
   overflow: hidden;
-  margin: var(--main-gap) auto;
+  border-radius: 10px;
 }
-@media (min-width: 778px) {
+@media (min-width: 992px) {
   .container {
+    padding: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-items: center;
+    display: grid;
+    place-content: center;
   }
-  .container > .cards {
+  .cards {
     display: flex;
   }
 }
@@ -50,7 +52,7 @@ body {
 .cards .card > p {
   max-width: 225px;
   line-height: 1.7;
-  color: var(--transparent-white);
+  color: var(--para-color);
 }
 .cards .card > .more {
   display: block;
@@ -66,7 +68,7 @@ body {
   color: var(--main-color);
   background-color: transparent;
 }
-@media (min-width: 778px) {
+@media (min-width: 992px) {
   .cards .card > .more {
     margin-top: 80px;
   }
@@ -75,21 +77,9 @@ body {
   outline: none;
 }
 /* Colors */
-.cards > .sednas {
-  background-color: var(--sedans-color);
-}
-.cards > .suvs {
-  background-color: var(--suvs-color);
-}
-.cards > .luxury {
-  background-color: var(--luxury-color);
-}
-.cards .sednas > .more {
-  color: var(--sedans-color);
-}
-.cards .suvs > .more {
-  color: var(--suvs-color);
-}
-.cards .luxury > .more {
-  color: var(--luxury-color);
-}
+.cards > .sednas {background-color: var(--sedans-color)}
+.cards > .suvs {background-color: var(--suvs-color)}
+.cards > .luxury {background-color: var(--luxury-color)}
+.cards .sednas > .more {color: var(--sedans-color)}
+.cards .suvs > .more {color: var(--suvs-color)}
+.cards .luxury > .more {color: var(--luxury-color)}
