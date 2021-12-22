@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --main-gap: 40px;
+  --main-color: hsl(0, 0%, 95%);
+  --para-color: hsla(0, 0%, 100%, 0.75);
+  --sedans-color: hsl(31, 77%, 52%);
+  --suvs-color: hsl(184, 100%, 22%);
+  --luxury-color: hsl(179, 100%, 13%);
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 90px 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+}
+
+.container > .cards {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+  .container > .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.container > .cards > .card {
+  padding: var(--main-gap);
+  color: var(--main-color);
+  background-color: var(--main-color);
+}
+
+.container > .cards > .card.sednas {
+  background-color: var(--sedans-color);
+}
+
+.container > .cards > .card.sednas > .more {
+  color: var(--sedans-color);
+}
+
+.container > .cards > .card.suvs {
+  background-color: var(--suvs-color);
+}
+
+.container > .cards > .card.suvs > .more {
+  color: var(--suvs-color);
+}
+
+.container > .cards > .card.luxury {
+  background-color: var(--luxury-color);
+}
+
+.container > .cards > .card.luxury > .more {
+  color: var(--luxury-color);
+}
+
+.container > .cards > .card > h2 {
+  text-transform: uppercase;
+  font-size: var(--main-gap);
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.container > .cards > .card > p {
+  max-width: 225px;
+  line-height: 1.7;
+  color: var(--para-color);
+}
+
+.container > .cards > .card > .more {
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (min-width: 992px) {
+  .container > .cards > .card > .more {
+    margin-top: 80px;
+  }
+}
+
+.container > .cards > .card > .more:focus {
+  outline: none;
+}
+
+.container > .cards > .card > .more:hover {
+  color: var(--main-color);
+  background-color: transparent;
+}
+/*# sourceMappingURL=main.css.map */

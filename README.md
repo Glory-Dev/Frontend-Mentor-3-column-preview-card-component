@@ -13,6 +13,7 @@ Thanks for checking out this front-end coding challenge.
 ## The challenge
 
 [Live Demo](https://glory-dev.github.io/Frontend-Mentor-3-column-preview-card-component/)
+
 Your challenge is to build out this 3-column preview card component and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
@@ -23,6 +24,12 @@ Your users should be able to:
 - See hover states for interactive elements
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+
+### Ideas to test yourself
+
+- Write your styles using a pre-processor, such as Sass, Less or Stylus
+- Train your eye for detail by getting your solution as close to the design as you can
+- Try estimating the time it will take for you to build the project. Then see if the time taken matches up to your estimate. Project estimations are a skill that is often overlooked, but is important for professional developers
 
 ## Where to find everything
 

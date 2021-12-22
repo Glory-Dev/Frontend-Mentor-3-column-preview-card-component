@@ -1,0 +1,81 @@
+// Media Queries
+$mobile: "max-width: 991px";
+$desktop: "min-width: 992px";
+// Import Global Rules
+@import "global-rules";
+
+.container {
+  @media ($mobile) {
+    padding: 90px 35px;
+  }
+  @media ($desktop) {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
+  > .cards {
+    overflow: hidden;
+    border-radius: 10px;
+    @media ($desktop) {
+      display: flex;
+    }
+
+    > .card {
+      padding: var(--main-gap);
+      color: var(--main-color);
+      background-color: var(--main-color);
+      // Colors
+      &.sednas {
+        background-color: var(--sedans-color);
+        > .more {
+          color: var(--sedans-color);
+        }
+      }
+      &.suvs {
+        background-color: var(--suvs-color);
+        > .more {
+          color: var(--suvs-color);
+        }
+      }
+      &.luxury {
+        background-color: var(--luxury-color);
+        > .more {
+          color: var(--luxury-color);
+        }
+      }
+
+      > h2 {
+        text-transform: uppercase;
+        font-size: var(--main-gap);
+        font-family: "Big Shoulders Display", cursive;
+      }
+      > p {
+        max-width: 225px;
+        line-height: 1.7;
+        color: var(--para-color);
+      }
+      > .more {
+        display: block;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 15px 30px;
+        @media ($desktop) {
+          margin-top: 80px;
+        }
+        border-radius: 50px;
+        border: 2px solid var(--main-color);
+        background-color: var(--main-color);
+        transition: background-color 0.3s, color 0.3s;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: var(--main-color);
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

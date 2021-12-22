@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-gap: 40px;
+  --main-color: hsl(0, 0%, 95%); // (background, headings, buttons)
+  --para-color: hsla(0, 0%, 100%, 0.75);
+  // Custom
+  --sedans-color: hsl(31, 77%, 52%);
+  --suvs-color: hsl(184, 100%, 22%);
+  --luxury-color: hsl(179, 100%, 13%);
+}
+body {
+  margin: 0;
+  font: {
+    size: 15px;
+    family: "Lexend Deca", sans-serif;
+  }
+  background-color: var(--main-color);
+}
